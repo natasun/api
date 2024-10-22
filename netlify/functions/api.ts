@@ -9,7 +9,7 @@ const api = express();
 api.use(cors());
 
 const router = Router();
-router.get("/api/nobitex", async (req, res) => {
+router.get("/currency/USDTIRT", async (req, res) => {
   try {
     const response = await fetch("https://api.nobitex.ir/v3/orderbook/USDTIRT");
     const data = await response.json();
