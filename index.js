@@ -8,7 +8,7 @@ app.use(cors());  // Enable CORS for all origins (not secure for production)
 
 app.get('/api/nobitex', async (req, res) => {
   try {
-    const response = await fetch('https://api.nobitex.ir/v3/orderbook/USDTIRT');
+    const response = await fetch('https://apiv2.nobitex.ir/v3/orderbook/USDTIRT');
     const data = await response.json();
     res.json(data);
   } catch (error) {
