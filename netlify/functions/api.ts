@@ -11,7 +11,7 @@ api.use(cors());
 const router = Router();
 router.get("/currency/USDTIRT", async (req, res) => {
   try {
-    const response = await fetch("https://api.nobitex.ir/v3/orderbook/USDTIRT");
+    const response = await fetch("https://apiv2.nobitex.ir/v3/orderbook/USDTIRT");
     const data = await response.json();
     res.json(data);
   } catch (error) {
